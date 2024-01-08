@@ -53,6 +53,28 @@ export default {
                         'Shop DC Collectibles', 
                     ]
                 },
+            ],
+            footerSocial: [
+                {
+                    name:'Facebook',
+                    url:'../assets/img/footer-facebook.png'
+                },
+                {
+                    name:'Twitter',
+                    url:'../assets/img/footer-twitter.png'
+                },
+                {
+                    name:'Youtube',
+                    url:'../assets/img/footer-youtube.png'
+                },
+                {
+                    name:'Pinterest',
+                    url:'../assets/img/footer-pinterest.png'
+                },
+                {
+                    name:'Periscope',
+                    url:'../assets/img/footer-periscope.png'
+                },
             ]
 
         }
@@ -111,7 +133,24 @@ export default {
                 
                 </div>
                 <div class="col-6">
-                    <img src="../assets/img/dc-logo-bg.png" alt="">
+                    <img class="logo-footer" src="../assets/img/dc-logo-bg.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row background-section">
+            <div class="col-6 d-flex justify-content-start align-items-center ">
+                <div class="margin-btn">
+                    <button>
+                        SIGN-UP NOW!
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 d-flex justify-content-end align-items-center">
+                <div class="d-flex flex-row px-5">
+                    <span class="me-3">FOLLOW US</span>
+                    <div v-for="(social, index) in footerSocial" :key="index">
+                            <img :src="social.url" :alt="social.name">
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,12 +160,49 @@ export default {
     @use '../styles/partials/variables' as *;
     @use '../styles/generals.scss' as *;
 
-        li {
-            font-size: 10px;
+
+    .col-6.d-flex.flex-wrap {
+    padding-top: 20px;
     
-            a{
-                color: grey;
-            }
+    li {
+        font-size: 10px;
+
+        a{
+            color: grey;
         }
+    }
+
+    }
+
+    .logo-footer {
+        width: 55%;
+    }
+
+    .background-section {
+        background-color: #303030;
+        height: 100px;
+    }
+
+    .margin-btn {
+        padding: 0 215px;
+
+        button {
+            padding: 10px;
+            color: $secondary_color;
+            background-color: transparent;
+            border: 3px solid $primary_color;
+    
+            &:hover{
+                background-color: $primary_color;
+                transition: background-color 0.700s;
+            }
+        }   
+    }
+
+    span {
+        color: $primary_color;
+        font-weight: 700;
+    }
+
 
 </style>
