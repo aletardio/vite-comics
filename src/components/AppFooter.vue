@@ -63,22 +63,56 @@ export default {
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-6">
-                    <div class="d-flex flex-row" v-for="(link, index) in footerLinks" :key="index">
-                        <h4 class="text-uppercase text-light">{{ link.name }}</h4>
-                            <ul class="size-title list-unstyled">
-                                <li v-for="(item, i) in link.description" :key="i">
-                                    <a class="text-decoration-none" :href="link.url">{{ item }}</a>
-                                </li>
-                            </ul>
+                <div class="col-6 d-flex flex-wrap">
+                    <div class="col-4">
+                        <div v-for="(link, index) in footerLinks" :key="index">
+                            <div v-if="link.name == 'dc comics'">
+                                <h4 class="text-uppercase text-light">{{ link.name }}</h4>
+                                <ul class="size-title list-unstyled">
+                                    <li v-for="(item, i) in link.description" :key="i">
+                                        <a class="text-decoration-none" :href="link.url">{{ item }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div v-if="link.name == 'shop'">
+                                <h4 class="text-uppercase text-light">{{ link.name }}</h4>
+                                <ul class="size-title list-unstyled">
+                                    <li v-for="(item, i) in link.description" :key="i">
+                                        <a class="text-decoration-none" :href="link.url">{{ item }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-4">
+                        <div v-for="(link, index) in footerLinks" :key="index">
+                            <div v-if="link.name == 'dc'">
+                                <h4 class="text-uppercase text-light">{{ link.name }}</h4>
+                                <ul class="size-title list-unstyled">
+                                    <li v-for="(item, i) in link.description" :key="i">
+                                        <a class="text-decoration-none" :href="link.url">{{ item }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div v-for="(link, index) in footerLinks" :key="index">
+                            <div v-if="link.name == 'sites'">
+                                <h4 class="text-uppercase text-light">{{ link.name }}</h4>
+                                <ul class="size-title list-unstyled">
+                                    <li v-for="(item, i) in link.description" :key="i">
+                                        <a class="text-decoration-none" :href="link.url">{{ item }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
                 <div class="col-6">
                     <img src="../assets/img/dc-logo-bg.png" alt="">
                 </div>
-            </div>
-            <div class="footer-grey">
-                sign up now
             </div>
         </div>
     </footer>

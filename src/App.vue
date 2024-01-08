@@ -2,12 +2,14 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppBlueSection from './components/AppBlueSection.vue';
 
 export default {
   components: {
     AppHeader,
     AppMain,
-    AppFooter
+    AppFooter,
+    AppBlueSection
   }
 }
 </script>
@@ -15,6 +17,7 @@ export default {
   <div>
     <AppHeader />
     <AppMain />
+    <AppBlueSection />
     <AppFooter />
   </div>
 </template>
