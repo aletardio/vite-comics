@@ -110,7 +110,7 @@ export default {
                     color: $primary_color;
                     border-bottom: 5px solid;
                     width: 50%;
-                    padding: 40px 20px;
+                    padding: 60px 20px;
                     border-bottom-color: $primary_color;
                 }
             }
