@@ -57,23 +57,23 @@ export default {
             footerSocial: [
                 {
                     name:'Facebook',
-                    url:'../assets/img/footer-facebook.png'
+                    src:'../assets/img/footer-facebook.png'
                 },
                 {
                     name:'Twitter',
-                    url:'../assets/img/footer-twitter.png'
+                    src:'../assets/img/footer-twitter.png'
                 },
                 {
                     name:'Youtube',
-                    url:'../assets/img/footer-youtube.png'
+                    src:'../assets/img/footer-youtube.png'
                 },
                 {
                     name:'Pinterest',
-                    url:'../assets/img/footer-pinterest.png'
+                    src:'../assets/img/footer-pinterest.png'
                 },
                 {
                     name:'Periscope',
-                    url:'../assets/img/footer-periscope.png'
+                    src:'../assets/img/footer-periscope.png'
                 },
             ]
 
@@ -149,7 +149,7 @@ export default {
                 <div class="d-flex flex-row px-5">
                     <span class="me-3">FOLLOW US</span>
                     <div v-for="(social, index) in footerSocial" :key="index">
-                            <img :src="social.url" :alt="social.name">
+                        <img :src="social.src">
                     </div>
                 </div>
             </div>
