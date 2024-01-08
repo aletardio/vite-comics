@@ -8,52 +8,52 @@ export default {
                 {
                     label:'Characters',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
                 {
                     label:'Comics',
                     url: '#',
-                    current: 'true'
+                    current: true
                 },
                 {
                     label:'Movies',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
                 {
                     label:'Tv',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
                 {
                     label:'Games',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
                 {
                     label:'Collectibles',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
                 {
                     label:'Videos',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
                 {
                     label:'Fans',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
                 {
                     label:'News',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
                 {
                     label:'Shop',
                     url: '#',
-                    current: 'false'
+                    current: false
                 },
             ]
         }
@@ -73,7 +73,7 @@ export default {
                     <nav>
                         <ul>
                             <li v-for="(link, index) in links" :key="index">
-                            <a :class="links.current ? 'active' : ''" :href="links.url">
+                            <a :class="(link.current) ? 'active' : ''" :href="link.url">
                                 {{ link.label }}
                             </a>
                             </li>
