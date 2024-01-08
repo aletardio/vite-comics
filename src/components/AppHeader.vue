@@ -72,9 +72,10 @@ export default {
                 <div class="col-8">
                     <nav>
                         <ul>
-                            <li v-for="(link, index) in links" ::key="index">
-                            <a :class="link.current ? 'active' : ''" :href="link.url"></a>
-                            {{ link.label }}
+                            <li v-for="(link, index) in links" :key="index">
+                            <a :class="links.current ? 'active' : ''" :href="links.url">
+                                {{ link.label }}
+                            </a>
                             </li>
                         </ul>
                     </nav>
@@ -84,24 +85,38 @@ export default {
     </header>
 </template>
 <style lang="scss" scoped>
-
+@use '../styles/partials/variables' as *;
     header {
         margin: 20px 0;
+        height: 100px;
 
         ul {
+            list-style: none;
             display: flex;
             flex-direction: row;
             justify-content: center;
             padding: 35px 0;
+
+            li a{
+                color: rgb(125, 125, 125);
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 0 20px;
+                font-size: 13px;
+
+                &.active,
+                &:hover {
+                    cursor: pointer;
+                    color: $primary_color;
+                    border-bottom: 5px solid;
+                    width: 50%;
+                    padding: 40px 20px;
+                    border-bottom-color: $primary_color;
+                }
+            }
+
         }
 
-        li {
-            color: rgb(125, 125, 125);
-            text-transform: uppercase;
-            list-style: none;
-            padding: 0 15px;
-            font-size: 13px;
-        }
     }
 
 </style>
