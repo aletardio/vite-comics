@@ -3,7 +3,58 @@ export default {
     name: 'AppFooter',
     data() {
         return {
-            
+            footerLinks: [
+                {
+                    name: "dc comics", 
+                    url: "#",
+                    description: [
+                        'Characters',
+                        'Comics', 
+                        'Movies', 
+                        'TV', 
+                        'Games', 
+                        'Videos', 
+                        'News'
+                    ]
+                },
+                {
+                    name: "dc", 
+                    url: "#",
+                    description: [
+                        'Terms Of User',
+                        'Privacy policy (New)', 
+                        'Ad Choices', 
+                        'Advertising', 
+                        'Jobs', 
+                        'Subscriptions', 
+                        'Talent Workshops',
+                        'CPSC Certificates',
+                        'Ratings',
+                        'Shop Help',
+                        'Contact Us'
+                    ]
+                },
+                {
+                    name: "sites", 
+                    url: "#",
+                    description: [
+                        'DC',
+                        'MAD Magazine', 
+                        'DC Kids', 
+                        'DC Universe', 
+                        'DC Power Visa', 
+                    ]
+                },
+                {
+                    name: "shop", 
+                    url: "#",
+                    description: [
+                        'Shop DC',
+                        'Shop DC Collectibles', 
+                    ]
+                },
+            ]
+
         }
     }
 }
@@ -13,7 +64,14 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-6">
-
+                    <div class="d-flex flex-row" v-for="(link, index) in footerLinks" :key="index">
+                        <h4 class="text-uppercase text-light">{{ link.name }}</h4>
+                            <ul class="size-title list-unstyled">
+                                <li v-for="(item, i) in link.description" :key="i">
+                                    <a class="text-decoration-none" :href="link.url">{{ item }}</a>
+                                </li>
+                            </ul>
+                    </div>
                 </div>
                 <div class="col-6">
                     <img src="../assets/img/dc-logo-bg.png" alt="">
@@ -29,8 +87,12 @@ export default {
     @use '../styles/partials/variables' as *;
     @use '../styles/generals.scss' as *;
 
-    .footer-grey {
-        
-    }
+        li {
+            font-size: 10px;
+    
+            a{
+                color: grey;
+            }
+        }
 
 </style>
