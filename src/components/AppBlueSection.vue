@@ -33,8 +33,8 @@ export default {
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 content d-flex justify-content-center align-items-center">
-                <div class="d-flex flex-row" v-for="(section, index) in blueSection" :key="index">
-                    <img class="icons" :src="section.url" :alt="section.name" />  
+                <div class="d-flex flex-row px-5" v-for="(section, index) in blueSection" :key="index">
+                    <img class="icons my-1" :src="section.url" :alt="section.name" />  
                     <div class="text-uppercase text-section text-light">{{ section.name }}</div>
                 </div>
             </div>
@@ -52,9 +52,11 @@ export default {
             padding: 20px 10px;
             font-size: 12px;
             
-        img.icons {
-            width: 20%;
         }
+        img.icons {
+            margin: 0 10px;
+            width: 40px;
+            height: 45px;
         }
     }
 
