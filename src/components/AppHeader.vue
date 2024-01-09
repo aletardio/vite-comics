@@ -103,6 +103,7 @@ export default {
                 text-transform: uppercase;
                 padding: 0 20px;
                 font-size: 13px;
+                font-weight: 700;
 
                 &.active,
                 &:hover {

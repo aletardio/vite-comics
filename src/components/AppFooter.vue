@@ -169,6 +169,10 @@ export default {
 
         a{
             color: grey;
+
+            &:hover{
+                color: white;
+            }
         }
     }
 
