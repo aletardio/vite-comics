@@ -1,6 +1,11 @@
 <script>
+import CardComics from './CardComics.vue'
+
 export default {
     name: 'AppMain',
+    components: {
+        CardComics
+    },
     data() {
         return {
             comics: [
@@ -89,13 +94,9 @@ export default {
         <div>
             <h5 class="jumbotron-heading">current series</h5>
         </div>
-        <div class="boxes cont-comics">
-            <div class="comics-card" v-for="comic, index in comics" :key="index">
-                <div class="img-card">
-                    <img :src="comic.thumb" alt="comic.series" />
-                </div>
-                <div class="text-comics text-light">{{ comic.series}}</div>
-            </div>
+
+        <div class="boxes cont-comics">    
+            <CardComics v-for="comic, index in comics" :key="index" :dc_comic="comic"/>
         </div>
         <div class="d-flex justify-content-center">
             <button>
@@ -137,36 +138,6 @@ export default {
         display: flex;
         flex-wrap: wrap;
 
-        .comics-card {
-            width: 200px;
-            margin: 15px 0;
-            padding: 0 10px;
-            overflow: hidden;
-
-            .img-card {
-            width: 200px; 
-            height: 200px;
-            }
-
-            .text-comics {
-                padding-top: 10px;
-                text-transform: uppercase;
-                text-align: center;
-                font-size: 12px;
-                font-weight: 700;
-            }
-            
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: 50% 0%;
-                &:hover{
-                    opacity: 0.5;
-                }
-            }
-
-        }
     }
 
     button {
