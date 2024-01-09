@@ -1,0 +1,11 @@
+@use './variables' as *;
+
+@mixin btn-load {
+    margin: 30px 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 8px 40px;
+    color: $secondary_color;
+    background-color: $primary_color;
+    border: 1px solid $primary_color;
+}

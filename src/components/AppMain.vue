@@ -88,13 +88,18 @@ export default {
                 <div>
                     <img :src="comic.thumb" alt="comic.series" />
                     <div class="text-comics text-light">{{ comic.series}}</div>
-                    <div class="price-comics text-light">{{ comic.price}}</div>
                 </div>
             </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button>
+                Load More
+            </button>
         </div>
     </main>
 </template>
 <style lang="scss" scoped>
+@use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/generals.scss' as *;
     
@@ -106,27 +111,36 @@ export default {
         flex-wrap: wrap;
 
         .comics-card {
-            width: 15%;
-            padding: 20px;
+            margin: 15px 0;
+            padding: 0 10px;
+            width: 200px; 
+            height: 200px;
+            overflow: hidden;
 
             .text-comics {
                 font-size: 15px;
-                padding-top: 15px;
-            }
-
-            .price-comics {
-                font-size: 15px;
-                padding-top: 5px;
             }
             
             img {
-                display: block;
-                width: calc(100% - 5px);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
             &:hover{
                 background-color: #000;
             }
+        }
+    }
+
+    button {
+        @include btn-load;
+
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            color: $primary_color;
+            background-color: $secondary_color;
+            border: 1px solid $secondary_color;
         }
     }
 
