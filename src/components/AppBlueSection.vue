@@ -6,23 +6,23 @@ export default {
             blueSection: [
                 {
                     name: 'digital comics',
-                    url: '../assets/img/buy-comics-digital-comics.png'
+                    url: '../public/img/buy-comics-digital-comics.png'
                 },
                 {
                     name: 'dc merchandise',
-                    url: '../assets/img/buy-comics-merchandise.png'
+                    url: '../public/img/buy-comics-merchandise.png'
                 },
                 {
                     name: 'subscription',
-                    url: '../assets/img/buy-comics-subscriptions.png'
+                    url: '../public/img/buy-comics-subscriptions.png'
                 },
                 {
                     name: 'comic shop locator',
-                    url: '../assets/img/buy-comics-shop-locator.png'
+                    url: '../public/img/buy-comics-shop-locator.png'
                 },
                 {
                     name: 'dc power visa',
-                    url: '../assets/img/buy-dc-power-visa.svg'
+                    url: '../public/img/buy-dc-power-visa.svg'
                 },
             ]
         }
@@ -34,8 +34,8 @@ export default {
         <div class="row">
             <div class="col-12 content d-flex justify-content-center align-items-center">
                 <div class="d-flex flex-row" v-for="(section, index) in blueSection" :key="index">
-                    <img :src="section.url" :alt="section.name" />  
-                    <div class="text-uppercase text-section">{{ section.name }}</div>
+                    <img class="icons" :src="section.url" :alt="section.name" />  
+                    <div class="text-uppercase text-section text-light">{{ section.name }}</div>
                 </div>
             </div>
         </div>
@@ -46,12 +46,16 @@ export default {
     @use '../styles/partials/variables' as *;
 
     .content {
-        height: 100px;
+        height: 120px;
         background-color: $primary_color;
+        .text-section {
+            padding: 20px 10px;
+            font-size: 12px;
+            
+        img.icons {
+            width: 20%;
+        }
+        }
     }
 
-    .text-section {
-        padding: 5px 10px;
-        font-size: 15px;
-    }
 </style>

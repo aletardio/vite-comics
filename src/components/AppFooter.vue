@@ -57,23 +57,23 @@ export default {
             footerSocial: [
                 {
                     name:'Facebook',
-                    src:'../assets/img/footer-facebook.png'
+                    src:'../public/img/footer-facebook.png'
                 },
                 {
                     name:'Twitter',
-                    src:'../assets/img/footer-twitter.png'
+                    src:'../public/img/footer-twitter.png'
                 },
                 {
                     name:'Youtube',
-                    src:'../assets/img/footer-youtube.png'
+                    src:'../public/img/footer-youtube.png'
                 },
                 {
                     name:'Pinterest',
-                    src:'../assets/img/footer-pinterest.png'
+                    src:'../public/img/footer-pinterest.png'
                 },
                 {
                     name:'Periscope',
-                    src:'../assets/img/footer-periscope.png'
+                    src:'../public/img/footer-periscope.png'
                 },
             ]
 
@@ -148,7 +148,7 @@ export default {
             <div class="col-6 d-flex justify-content-end align-items-center">
                 <div class="d-flex flex-row px-5">
                     <span class="me-3">FOLLOW US</span>
-                    <div v-for="(social, index) in footerSocial" :key="index">
+                    <div class="px-2" v-for="(social, index) in footerSocial" :key="index">
                         <img :src="social.src">
                     </div>
                 </div>
@@ -200,6 +200,7 @@ export default {
     }
 
     span {
+        padding-top: 5px;
         color: $primary_color;
         font-weight: 700;
     }
