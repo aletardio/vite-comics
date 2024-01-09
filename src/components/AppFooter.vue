@@ -57,23 +57,23 @@ export default {
             footerSocial: [
                 {
                     name:'Facebook',
-                    src:'../public/img/footer-facebook.png'
+                    src:'/img/footer-facebook.png'
                 },
                 {
                     name:'Twitter',
-                    src:'../public/img/footer-twitter.png'
+                    src:'/img/footer-twitter.png'
                 },
                 {
                     name:'Youtube',
-                    src:'../public/img/footer-youtube.png'
+                    src:'/img/footer-youtube.png'
                 },
                 {
                     name:'Pinterest',
-                    src:'../public/img/footer-pinterest.png'
+                    src:'/img/footer-pinterest.png'
                 },
                 {
                     name:'Periscope',
-                    src:'../public/img/footer-periscope.png'
+                    src:'/img/footer-periscope.png'
                 },
             ]
 
@@ -133,7 +133,7 @@ export default {
                 
                 </div>
                 <div class="col-6">
-                    <img class="logo-footer" src="../assets/img/dc-logo-bg.png" alt="">
+                    <img class="logo-footer" src="/img/dc-logo-bg.png" alt="">
                 </div>
             </div>
         </div>

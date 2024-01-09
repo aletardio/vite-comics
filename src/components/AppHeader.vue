@@ -66,7 +66,7 @@ export default {
             <div class="row">
                 <div class="col-4">
                     <a href="/" class="brand">
-                        <img src="../assets/img/dc-logo.png" alt="">
+                        <img src="/img/dc-logo.png" alt="">
                     </a>
                 </div>
                 <div class="col-8">

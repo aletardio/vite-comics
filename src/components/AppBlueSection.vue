@@ -6,23 +6,23 @@ export default {
             blueSection: [
                 {
                     name: 'digital comics',
-                    url: '../public/img/buy-comics-digital-comics.png'
+                    url: '/img/buy-comics-digital-comics.png'
                 },
                 {
                     name: 'dc merchandise',
-                    url: '../public/img/buy-comics-merchandise.png'
+                    url: '/img/buy-comics-merchandise.png'
                 },
                 {
                     name: 'subscription',
-                    url: '../public/img/buy-comics-subscriptions.png'
+                    url: '/img/buy-comics-subscriptions.png'
                 },
                 {
                     name: 'comic shop locator',
-                    url: '../public/img/buy-comics-shop-locator.png'
+                    url: '/img/buy-comics-shop-locator.png'
                 },
                 {
                     name: 'dc power visa',
-                    url: '../public/img/buy-dc-power-visa.svg'
+                    url: '/img/buy-dc-power-visa.svg'
                 },
             ]
         }
