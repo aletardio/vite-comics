@@ -65,7 +65,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <a href="/" class="brand">
+                    <a href="/">
                         <img src="/img/dc-logo.png" alt="">
                     </a>
                 </div>
@@ -88,7 +88,7 @@ export default {
 @use '../styles/partials/variables' as *;
     header {
         margin: 20px 0;
-        height: 88px;
+        height: 100px;
 
         ul {
             list-style: none;

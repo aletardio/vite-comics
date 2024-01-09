@@ -1,6 +1,7 @@
 @use './variables' as *;
 
 @mixin btn-load {
+    font-weight: 600;
     margin: 30px 0;
     font-size: 15px;
     text-transform: uppercase;

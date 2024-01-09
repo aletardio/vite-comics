@@ -86,12 +86,15 @@ export default {
         <div class="jumbotron"> 
             <img class="jumbotron-image" src="/img/jumbotron.jpg" alt="">
         </div>
+        <div>
+            <h5 class="jumbotron-heading">current series</h5>
+        </div>
         <div class="boxes cont-comics">
             <div class="comics-card" v-for="comic, index in comics" :key="index">
-                <div>
+                <div class="img-card">
                     <img :src="comic.thumb" alt="comic.series" />
-                    <div class="text-comics text-light">{{ comic.series}}</div>
                 </div>
+                <div class="text-comics text-light">{{ comic.series}}</div>
             </div>
         </div>
         <div class="d-flex justify-content-center">
@@ -108,6 +111,7 @@ export default {
     
 
     .jumbotron {
+        position: relative;
         width: 100%;
         height: 400px;
         overflow: hidden;
@@ -117,6 +121,16 @@ export default {
             height: auto;
         }
     }
+    .jumbotron-heading{
+        font-weight: 700;
+        position: absolute;
+        bottom: 425px;
+        left: 19%;
+        color: white;
+        text-transform: uppercase;
+        background-color: $primary_color;
+        padding: 10px 15px;
+    }
     .boxes {
         cursor: pointer;
         margin-top: 2rem;
@@ -124,25 +138,34 @@ export default {
         flex-wrap: wrap;
 
         .comics-card {
+            width: 200px;
             margin: 15px 0;
             padding: 0 10px;
-            width: 200px; 
-            height: 200px;
             overflow: hidden;
 
+            .img-card {
+            width: 200px; 
+            height: 200px;
+            }
+
             .text-comics {
-                font-size: 15px;
+                padding-top: 10px;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 700;
             }
             
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: 50% 0%;
+                &:hover{
+                    opacity: 0.5;
+                }
             }
 
-            &:hover{
-                background-color: #000;
-            }
         }
     }
 
@@ -156,7 +179,5 @@ export default {
             border: 1px solid $secondary_color;
         }
     }
-
-
 
 </style>
