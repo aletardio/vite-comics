@@ -83,6 +83,9 @@ export default {
 </script>
 <template lang="">
     <main>
+        <div class="jumbotron"> 
+            <img class="jumbotron-image" src="/img/jumbotron.jpg" alt="">
+        </div>
         <div class="boxes cont-comics">
             <div class="comics-card" v-for="comic, index in comics" :key="index">
                 <div>
@@ -104,6 +107,16 @@ export default {
 @use '../styles/generals.scss' as *;
     
 
+    .jumbotron {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        object-fit: cover;
+        .jumbotron-image {
+            width: 100%;
+            height: auto;
+        }
+    }
     .boxes {
         cursor: pointer;
         margin-top: 2rem;
