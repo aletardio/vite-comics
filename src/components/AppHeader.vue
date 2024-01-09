@@ -88,7 +88,7 @@ export default {
 @use '../styles/partials/variables' as *;
     header {
         margin: 20px 0;
-        height: 100px;
+        height: 88px;
 
         ul {
             list-style: none;
